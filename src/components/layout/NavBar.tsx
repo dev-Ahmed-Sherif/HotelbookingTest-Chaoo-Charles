@@ -6,8 +6,10 @@ import Image from "next/image";
 
 import Container from "@/components/Container";
 import Searchinput from "@/components/Searchinput";
+import ModeToggle from "@/components/mode-toggle";
 
 import { Button } from "@/components/ui/button";
+import { NavMenu } from "./NavMenu";
 
 function NavBar() {
   const router = useRouter();
@@ -15,7 +17,7 @@ function NavBar() {
   const { userId } = useAuth();
 
   return (
-    <div className="sticky top-0 border border-b-primary/10 bg-secondary">
+    <header className="sticky top-0 border border-b-primary/10 bg-secondary">
       <Container>
         <div className="flex items-center justify-between">
           <div
@@ -27,7 +29,8 @@ function NavBar() {
           </div>
           <Searchinput />
           <div className="flex items-center gap-3">
-            <div>theme</div>
+            <ModeToggle />
+            <NavMenu />
             <UserButton afterSwitchSessionUrl="/" />
             {!userId && (
               <>
@@ -46,7 +49,7 @@ function NavBar() {
           </div>
         </div>
       </Container>
-    </div>
+    </header>
   );
 }
 
