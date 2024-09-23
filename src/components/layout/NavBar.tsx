@@ -9,7 +9,7 @@ import Searchinput from "@/components/Searchinput";
 import ModeToggle from "@/components/mode-toggle";
 
 import { Button } from "@/components/ui/button";
-import { NavMenu } from "./NavMenu";
+import { NavMenu } from "@/components/layout/NavMenu";
 
 function NavBar() {
   const router = useRouter();

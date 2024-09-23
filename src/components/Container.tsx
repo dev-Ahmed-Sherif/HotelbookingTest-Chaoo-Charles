@@ -1,3 +1,4 @@
+"use client";
 function Container({
   children,
 }: Readonly<{
